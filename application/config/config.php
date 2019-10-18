@@ -23,7 +23,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | a PHP script and you can easily do that on your own.
 |
 */
-$config['base_url'] = 'http://localhost/rekweb/coba-ci/';
+$config['base_url'] = 'http://localhost/173040004/codeigniter/';
 
 /*
 |--------------------------------------------------------------------------

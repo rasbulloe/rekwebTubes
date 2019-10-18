@@ -15,24 +15,32 @@
         <div class="row">
             <div class="col-6">
               <h3> Form Tambah Data Mahasiswa</h3>
+              <br>
               <form method="post" action="<?= base_url('mahasiswa/tambah'); ?>">
-                <div class="form-group">
-                    <label for="nama">Nama</label>
-                    <input type="text" class="form-control" id="nama" name="nama">
-                    <?= form_error('nama'); ?>
-                    
+                <div class="form-group row">
+                  <label for="nama" class="col-sm-2 col-form-label col-form-label-sm">Nama</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-sm" id="nama" name="nama">
+                  <?= form_error('nama'); ?>
+                  </div>
                 </div>
-                <div class="form-group">
-                    <label for="nrp">Nrp</label>
-                    <input type="text" class="form-control" id="nrp" name="nrp">
+                <div class="form-group row">
+                  <label for="nrp" class="col-sm-2 col-form-label col-form-label-sm">NRP</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-sm" id="nrp" name="nrp">
+                  </div>
                 </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" id="email" name="email">
+                <div class="form-group row">
+                  <label for="email" class="col-sm-2 col-form-label col-form-label-sm">Email</label>
+                  <div class="col-sm-10">
+                  <input type="email" class="form-control form-control-sm" id="email" name="email">
+                  </div>
                 </div>
-                <div class="form-group">
-                    <label for="jurusan">Jurusan</label>
-                    <input type="text" class="form-control" id="jurusan" name="jurusan">
+                <div class="form-group row">
+                  <label for="jurusan" class="col-sm-2 col-form-label col-form-label-sm">Jurusan</label>
+                  <div class="col-sm-10">
+                  <input type="text" class="form-control form-control-sm" id="jurusan" name="jurusan">
+                  </div>
                 </div>
                 <button type="submit" class="btn btn-primary">Tambah Data</button>
               </form>
