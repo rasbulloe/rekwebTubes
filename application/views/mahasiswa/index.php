@@ -1,5 +1,19 @@
 
     <div class="container">
+
+    <?php if ( $this->session->flashdata('flash') ) : ?>
+    <div class="row mt-3">
+    <div class="col">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    Data Mahasiswa <strong>Berhasil</strong> <?= $this->session->flashdata('flash'); ?>.
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    </div>
+    <?php endif; ?>
+
         <div class="row">
             <div class="col">
                 <h3>Daftar Mahasiswa</h3>
@@ -27,7 +41,7 @@
       <td><?= $mhs['jurusan']; ?></td>
       <td>
           <a href="" class="badge badge-dark">Ubah</a>
-          <a href="" class="badge badge-danger">Hapus</a>
+          <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger" onclick="return confirm('Yakin ?');">Hapus</a>
       </td>
     </tr>
 <?php endforeach; ?>
