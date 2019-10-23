@@ -23,4 +23,8 @@ class Mahasiswa_model extends CI_Model {
 
     }
 
+    public function getMahasiswaById($id) {
+       return $this->db->get_where('mahasiswa', ['id' => $id])->row_array();
+    }
+
 }

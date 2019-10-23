@@ -42,6 +42,7 @@
       <td>
           <a href="" class="badge badge-dark">Ubah</a>
           <a href="<?= base_url(); ?>mahasiswa/hapus/<?= $mhs['id']; ?>" class="badge badge-danger" onclick="return confirm('Yakin ?');">Hapus</a>
+          <a href="<?= base_url(); ?>mahasiswa/detail/<?= $mhs['id']; ?>" class="badge badge-primary">Detail</a>
       </td>
     </tr>
 <?php endforeach; ?>
