@@ -17,7 +17,22 @@
         <div class="row">
             <div class="col">
                 <h3>Daftar Mahasiswa</h3>
+
     <a href="<?= base_url('mahasiswa/tambah'); ?>" class="btn btn-dark mb-3">Tambah Data Mahasiswa</a>
+
+<div class="row">
+  <div class="col md-6">
+    <form action="" method="post">
+        <div class="input-group mb-3">
+      <input type="text" class="form-control" placeholder="Cari Data Mahasiswa" name="keyword">
+      <div class="input-group-append">
+        <button class="btn btn-primary" type="submit">Cari</button>
+      </div>
+    </div>
+    </form>
+  </div>
+</div>
+
 
 <table class="table">
   <thead class="thead-dark">
@@ -48,6 +63,11 @@
 <?php endforeach; ?>
   </tbody>
 </table>
+<?php if (empty($mahasiswa)) : ?>
+                <div class="alert alert-danger" role="alert">
+                data mahasiswa tidak ditemukan
+                </div>
+              <?php endif; ?>
             </div>
         </div>
     </div>

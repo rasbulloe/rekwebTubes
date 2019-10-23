@@ -12,13 +12,16 @@
         public function index() {
 
             $data['judul'] = 'Daftar Mahasiswa';
+            $data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
+            if ($this->input->post('keyword')) {
+                $data['mahasiswa'] = $this->Mahasiswa_model->cariDataMahasiswa();
+            }
 
             $this->load->view('templates/header', $data);
+            $this->load->view('mahasiswa/index', $data);
             $this->load->view('templates/footer');
 
 
-            $data['mahasiswa'] = $this->Mahasiswa_model->getAllMahasiswa();
-            $this->load->view('mahasiswa/index', $data);
        
         }
 
@@ -57,7 +60,7 @@
         }
     
         public function ubah($id) {
-            
+
             $data['judul'] = 'Form Ubah Data Mahasiswa';
             $data['mahasiswa'] = $this->Mahasiswa_model->getMahasiswaById($id);
             $data['jurusan'] = ['Teknik Informatika', 'Teknik Mesin', 'Teknik Planologi', 'Teknik Pangan', 'Teknik Lingkungan'];
@@ -75,8 +78,9 @@
                 $this->session->set_flashdata('flash', 'Diubah');
                 redirect('mahasiswa/index');
             }
+
         }
 
 
-    
+
     }

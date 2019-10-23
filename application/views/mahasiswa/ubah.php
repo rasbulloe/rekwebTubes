@@ -7,7 +7,7 @@
                 Ubah Data Mahasiswa
               </div>
               <div class="card-body">
-              <form method="post" action="<?= base_url('mahasiswa/tambah'); ?>">
+              <form method="post" action="<?= base_url('mahasiswa/ubah'); ?>">
               <input type="hidden" name="id" value="<?= $mahasiswa['id']; ?>">
                 <div class="form-group row">
                   <label for="nama" class="col-sm-2 col-form-label col-form-label-sm">Nama</label>
