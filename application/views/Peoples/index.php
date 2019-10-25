@@ -14,10 +14,9 @@
                 </tr>
                 </thead>
                 <tbody>
-                <?php $i = 1; ?>
                 <?php foreach ($peoples as $peoples) : ?>
                 <tr>
-                <th><?= $i++ ?></th>
+                <th><?= ++$start; ?></th>
                 <th><?= $peoples['name']; ?></th>
                 <th><?= $peoples['address']; ?></th>
                 <th><?= $peoples['email']; ?></th>
@@ -30,6 +29,8 @@
                 <?php endforeach; ?>
                 </tbody>
             </table>
+
+            <?= $this->pagination->create_links(); ?>
 
         </div>
     </div>
