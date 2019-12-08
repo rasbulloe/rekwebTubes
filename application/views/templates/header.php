@@ -13,19 +13,23 @@
   </head>
   <body>
 
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <nav class="navbar navbar-expand-lg navbar-primary bg-warning">
+  <div class="container ml-5">
+  <a class="navbar-brand" href="#">I-KAE</a>
+  </div>
   <div class="container">
-  <a class="navbar-brand" href="#">CodeIgniter</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
   <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
     <div class="navbar-nav">
       <a class="nav-item nav-link" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
-      <a class="nav-item nav-link" href="<?= base_url(); ?>mahasiswa">Mahasiswa</a>
-      <a class="nav-item nav-link" href="<?= base_url(); ?>peoples">Peoples</a>
-      <a class="nav-item nav-link" href="#">About</a>
+      <a class="nav-item nav-link" href="<?= base_url(); ?>">Kategori</a>
+      <a class="nav-item nav-link" href="<?= base_url(); ?>">About</a>
+    <div class="contaniner">
+      <a class="nav-item nav-link" href="<?= base_url('auth'); ?>">Login</a>
     </div>
   </div>
   </div>
+</div>
 </nav>
