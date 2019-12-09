@@ -21,7 +21,7 @@
           </a>
       </div>
 
-      <CENTER><h2>LIST PRODUK YANG DITAMPILKAN</h2></CENTER>
+      <h2 class="text-center font-weight-bold">LIST PRODUK YANG DITAMPILKAN</h2>
 
       <br>
       <br>
