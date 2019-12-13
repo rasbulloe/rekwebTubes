@@ -68,3 +68,14 @@ Acknowledgement
 
 The CodeIgniter team would like to thank EllisLab, all the
 contributors to the CodeIgniter project and you, the CodeIgniter user.
+
+
+
+
+
+
+
+***************
+BACA : PENTING
+***************
+localhost menjadi 127.0.0.1
