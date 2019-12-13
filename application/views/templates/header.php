@@ -45,7 +45,7 @@
               <a class="dropdown-item" href="#">Shop Category</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="<?= base_url('home/contact');?>">Contact</a>
+            <a class="nav-link" href="<?= base_url('contact/index');?>">Contact</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">Help</a>
