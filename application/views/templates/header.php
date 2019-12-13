@@ -41,7 +41,7 @@
               Shop
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Detai Product</a>
+              <a class="dropdown-item" href="#">Detail Product</a>
               <a class="dropdown-item" href="#">Shop Category</a>
           </li>
           <li class="nav-item">
