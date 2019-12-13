@@ -98,18 +98,18 @@
 		</div>
 		
 	</footer><!--/Footer-->
-	<script src="<?php echo base_url()?>assets/front/js/jquery.js"></script>
-	<script src="<?php echo base_url()?>assets/front/js/bootstrap.min.js"></script>
-	<script src="<?php echo base_url()?>assets/front/js/jquery.scrollUp.min.js"></script>
-	<script src="<?php echo base_url()?>assets/front/js/price-range.js"></script>
-	<script src="<?php echo base_url()?>assets/front/js/jquery.prettyPhoto.js"></script>
-	<script src="<?php echo base_url()?>assets/front/js/main.js"></script>
 </body>
 </html>   
    
    
    
    
+	<script src="<?php echo base_url()?>assets/front/js/jquery.js"></script>
+	<script src="<?php echo base_url()?>assets/front/js/bootstrap.min.js"></script>
+	<script src="<?php echo base_url()?>assets/front/js/jquery.scrollUp.min.js"></script>
+	<script src="<?php echo base_url()?>assets/front/js/price-range.js"></script>
+	<script src="<?php echo base_url()?>assets/front/js/jquery.prettyPhoto.js"></script>
+	<script src="<?php echo base_url()?>assets/front/js/main.js"></script>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
