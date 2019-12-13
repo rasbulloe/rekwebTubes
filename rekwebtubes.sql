@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 13, 2019 at 06:05 PM
--- Server version: 10.4.6-MariaDB
--- PHP Version: 7.1.32
+-- Waktu pembuatan: 13 Des 2019 pada 18.56
+-- Versi server: 10.4.6-MariaDB
+-- Versi PHP: 7.3.9
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -25,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `barang`
+-- Struktur dari tabel `barang`
 --
 
 CREATE TABLE `barang` (
@@ -40,7 +40,7 @@ CREATE TABLE `barang` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contact`
+-- Struktur dari tabel `contact`
 --
 
 CREATE TABLE `contact` (
@@ -51,37 +51,104 @@ CREATE TABLE `contact` (
   `pesan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user`
+--
+
+CREATE TABLE `user` (
+  `id` int(11) NOT NULL,
+  `name` varchar(128) CHARACTER SET utf8 NOT NULL,
+  `email` varchar(128) CHARACTER SET utf8 NOT NULL,
+  `image` varchar(128) CHARACTER SET utf8 NOT NULL,
+  `password` varchar(256) CHARACTER SET utf8 NOT NULL,
+  `role_id` int(11) NOT NULL,
+  `is_active` int(1) NOT NULL,
+  `date_created` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `user`
+--
+
+INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
+(3, 'admin', 'admin@admin.com', 'default.jpg', '$2y$10$7vbgVZ0VAYgKW8uuEAraxOZOcSxd/o44iB485d58WdSBn7Zf.4GMO', 2, 1, 1576258618);
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `user_role`
+--
+
+CREATE TABLE `user_role` (
+  `id` int(11) NOT NULL,
+  `role` varchar(128) CHARACTER SET utf8 NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `user_role`
+--
+
+INSERT INTO `user_role` (`id`, `role`) VALUES
+(1, 'Administrator'),
+(2, 'Member');
+
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `barang`
+-- Indeks untuk tabel `barang`
 --
 ALTER TABLE `barang`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `contact`
+-- Indeks untuk tabel `contact`
 --
 ALTER TABLE `contact`
   ADD PRIMARY KEY (`id`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- Indeks untuk tabel `user`
+--
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `user_role`
+--
+ALTER TABLE `user_role`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `barang`
+-- AUTO_INCREMENT untuk tabel `barang`
 --
 ALTER TABLE `barang`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `contact`
+-- AUTO_INCREMENT untuk tabel `contact`
 --
 ALTER TABLE `contact`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT untuk tabel `user`
+--
+ALTER TABLE `user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT untuk tabel `user_role`
+--
+ALTER TABLE `user_role`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
