@@ -17,6 +17,7 @@ class User extends CI_Controller
 
     public function account()
     {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
 
         $data['judul'] = 'My Profile';
         $this->load->view('templates/user_header', $data);
