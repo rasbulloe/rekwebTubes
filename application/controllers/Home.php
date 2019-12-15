@@ -13,4 +13,12 @@ class Home extends CI_Controller
         $this->load->view('home/index', $data);
         $this->load->view('templates/footer');
     }
+
+    public function contact()
+    {
+        $data['judul'] = 'Contact | Astro';
+        $this->load->view('templates/header', $data);
+        $this->load->view('contact/index');
+        $this->load->view('templates/footer');
+    }
 }
