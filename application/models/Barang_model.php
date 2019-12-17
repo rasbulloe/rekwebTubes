@@ -6,44 +6,47 @@ class Barang_model extends CI_model{
     }
     public function tambahDataMahasiswa(){
         $data = [
-                "Nama Barang" => $this->input->post('Nama Barang', true),
-                "Harga Barang" => $this->input->post('Harga Barang', true),
-                "Tanggal Pembelian" => $this->input->post('Tanggal Pembelian', true),
-                "Tanggal Penjualan" => $this->input->post('Tanggal Penjualan', true),
-                "Spesifikasi" => $this->input->post('Spesifikasi', true),
+                "namaBarang" => $this->input->post('namaBarang', true),
+                "hargaBarang" => $this->input->post('hargaBarang', true),
+                "tanggalPembelian" => $this->input->post('tanggalPembelian', true),
+                "tanggalPenjualan" => $this->input->post('tanggalPenjualan', true),
+                "spesifikasi" => $this->input->post('spesifikasi', true),
+                "gambar" => $this->input->post('gambar', true),
         ];
         $this->db->insert('barang', $data);
     }
     
     public function hapusDataBarang($id){
         // $this->db->where('id', $id);
-        $this->db->delete('barang', ['id'=>$id]);
+        $this->db->delete('barang', ['idBarang'=>$id]);
     }
     
     public function getMahasiswaById($id){
-        return $this->db->get_where('barang', ['id'=> $id])->row_array();
+        return $this->db->get_where('barang', ['idBarang'=> $id])->row_array();
     }
     
     public function ubahDataBarang(){
         $data = [
-                "Nama Barang" => $this->input->post('Nama Barang', true),
-                "Harga Barang" => $this->input->post('Harga Barang', true),
-                "Tanggal Pembelian" => $this->input->post('Tanggal Pembelian', true),
-                "Tanggal Penjualan" => $this->input->post('Tanggal Penjualan', true),
-                "Spesifikasi" => $this->input->post('Spesifikasi', true),
+                "namaBarang" => $this->input->post('namaBarang', true),
+                "hargaBarang" => $this->input->post('hargaBarang', true),
+                "tanggalPembelian" => $this->input->post('tanggalPembelian', true),
+                "tanggalPenjualan" => $this->input->post('tanggalPenjualan', true),
+                "spesifikasi" => $this->input->post('spesifikasi', true),
+                "gambar" => $this->input->post('gambar', true),
         ];
-        $this->db->where('id', $this->input->post('id'));
+        $this->db->where('id', $this->input->post('idBarang'));
         
         $this->db->update('barang', $data);
         
     }
     public function cariDataMahasiswa(){
         $keyword = $this->input->post('keyword', true);
-        $this->db->like('Nama Barang',$keyword);
-        $this->db->or_like('Harga Barang',$keyword);
-        $this->db->or_like('Tanggal Pembelian',$keyword);
-        $this->db->or_like('Tanggal Penjualan',$keyword);
-        $this->db->or_like('Spesifikasi',$keyword);
-        return $this->db->get('mahasiswa')->result_array();
+        $this->db->like('namaBarang',$keyword);
+        $this->db->or_like('hargaBarang',$keyword);
+        $this->db->or_like('tanggalPembelian',$keyword);
+        $this->db->or_like('tanggalPenjualan',$keyword);
+        $this->db->or_like('spesifikasi',$keyword);
+        $this->db->or_like('gambar',$keyword);
+        return $this->db->get('barang')->result_array();
     }
 }
