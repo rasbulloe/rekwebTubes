@@ -21,3 +21,11 @@
     </div>
 
 </section>
+
+<section class="product-desc">
+    <div class="container">
+        <h6>Product Description</h6>
+        <p>Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. Jika menggunakan kursi ini anda akan terbang mengelilingi dunia.</p>
+    </div>
+
+</section>
