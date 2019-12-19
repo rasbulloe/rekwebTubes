@@ -6,7 +6,7 @@ class Home extends CI_Controller
     public function index()
     {
 
-        $data['barang'] = $this->Barang_model->tampil_data()->result();
+        $data['barang'] = $this->Barang_model->tampilDataBarang()->result();
         $data['judul'] = 'Home | Astro';
         $this->load->view('templates/header', $data);
         $this->load->view('home/index', $data);

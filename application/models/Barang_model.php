@@ -2,7 +2,7 @@
 class Barang_model extends CI_model
 {
 
-    public function tampil_data()
+    public function tampilDataBarang()
     {
         return $this->db->get('tb_barang');
     }
@@ -32,6 +32,7 @@ class Barang_model extends CI_model
         $this->db->update('barang', $data);
     }
 
+<<<<<<< HEAD
     public function getBarangById($id){
         return $this->db->get_where('tb_barang', ['id_brg'=> $id])->row_array();
     }
@@ -91,4 +92,6 @@ class Barang_model extends CI_model
     //     $this->db->or_like('Spesifikasi', $keyword);
     //     return $this->db->get('mahasiswa')->result_array();
     // }
+=======
+>>>>>>> cde789a902e579c60296f5c54d78af0d70a98576
 }
