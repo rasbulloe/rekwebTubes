@@ -1,110 +1,191 @@
-<div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-        <div class="carousel-item active">
-            <img src="<?= base_url('assets/img/home/coba1.jpeg'); ?>" class="d-block w-100" height="575px" weight="1260px" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="<?= base_url('assets/img/home/slide2.jpg'); ?>" class="d-block w-100" height="575px" weight="1260px" alt="...">
-        </div>
-        <div class="carousel-item">
-            <img src="<?= base_url('assets/img/home/slide3.jfif'); ?>" class="d-block w-100" height="575px" weight="1260px" alt="...">
-        </div>
-    </div>
-    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="container">
-    <h2 class="text-center font-weight-bold">LIST PRODUK YANG DITAMPILKAN</h2>
+<head>
 
-    <div class="row mx-auto">
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+    <!-- start: Meta -->
+    <meta charset="utf-8">
+    <title>Astro Admin Panel Dashboard</title>
+    <meta name="description" content="Shop Admin Panel Dashboard">
+    <meta name="author" content="Engr Rostom Ali">
+    <meta name="keyword" content="Shop Admin Panel Dashboard">
+    <!-- end: Meta -->
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+    <!-- start: Mobile Specific -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- end: Mobile Specific -->
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+    <!-- start: CSS -->
+    <link id="bootstrap-style" href="<?php echo base_url() ?>assets/admin/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url() ?>assets/admin/css/bootstrap-responsive.min.css" rel="stylesheet">
+    <link id="base-style" href="<?php echo base_url() ?>assets/admin/css/style.css" rel="stylesheet">
+    <link id="base-style-responsive" href="<?php echo base_url() ?>assets/admin/css/style-responsive.css" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800&subset=latin,cyrillic-ext,latin-ext' rel='stylesheet' type='text/css'>
+    <!-- end: CSS -->
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
-    </div>
 
-    <div class="row mx-auto">
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+    <!-- start: Favicon -->
+    <link rel="shortcut icon" href="<?php echo base_url() ?>assets/admin/img/favicon.jpg">
+    <!-- end: Favicon -->
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
+
+
+</head>
+
+<body>
+    <!-- start: Header -->
+    <div class="navbar">
+        <div class="navbar-inner">
+            <div class="container-fluid">
+                <a class="btn btn-navbar" data-toggle="collapse" data-target=".top-nav.nav-collapse,.sidebar-nav.nav-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </a>
+                <a class="brand" href="<?php echo base_url('dashboard') ?>"><span>Astro Admin Panel</span></a>
+
+                <!-- start: Header Menu -->
+                <div class="nav-no-collapse header-nav">
+                    <ul class="nav pull-right">
+
+                        <li class="dropdown">
+                            <a class="btn dropdown-toggle" data-toggle="dropdown" href="#">
+                                <i class="halflings-icon white user"></i> <?php echo $this->session->userdata('user_name'); ?>
+                                <span class="caret"></span>
+                            </a>
+                            <ul class="dropdown-menu">
+                                <li class="dropdown-menu-title">
+                                    <span>Account Settings</span>
+                                </li>
+                                <li><a href="#"><i class="halflings-icon user"></i> Profile</a></li>
+                                <li><a href="<?php echo base_url('auth/logout') ?>"><i class="halflings-icon off"></i> Logout</a></li>
+                            </ul>
+                        </li>
+                        <!-- end: User Dropdown -->
+                    </ul>
+                </div>
+                <!-- end: Header Menu -->
+
             </div>
         </div>
     </div>
+    <!-- start: Header -->
 
-</div>
+    <div class="container-fluid-full">
+        <div class="row-fluid">
+
+            <!-- start: Main Menu -->
+            <div id="sidebar-left" class="span2">
+                <div class="nav-collapse sidebar-nav">
+                    <ul class="nav nav-tabs nav-stacked main-menu">
+                        <li><a href="<?php echo base_url('dashboard') ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+                        <li><a href="<?php echo base_url('manage/category') ?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Data Barang</span></a></li>
+                        <li><a href="<?php echo base_url('add/category') ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Invoices</span></a></li>
+
+                    </ul>
+                </div>
+            </div>
+            <!-- end: Main Menu -->
+
+            <noscript>
+                <div class="alert alert-block span10">
+                    <h4 class="alert-heading">Warning!</h4>
+                    <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
+                </div>
+            </noscript>
+
+            <!-- <?php echo $maincontent; ?> -->
+
+        </div>
+        <!--/#content.span10-->
+    </div>
+    <!--/fluid-row-->
+
+    <div class="modal hide fade" id="myModal">
+        <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h3>Settings</h3>
+        </div>
+        <div class="modal-body">
+            <p>Here settings can be configured...</p>
+        </div>
+        <div class="modal-footer">
+            <a href="#" class="btn" data-dismiss="modal">Close</a>
+            <a href="#" class="btn btn-primary">Save changes</a>
+        </div>
+    </div>
+
+    <div class="clearfix"></div>
+
+    <footer>
+
+        <p>
+            <span style="text-align:left;float:left">&copy; 2013 <a href="http://jiji262.github.io/Bootstrap_Metro_Dashboard/" alt="Bootstrap_Metro_Dashboard">Bootstrap Metro Dashboard</a></span>
+
+        </p>
+
+    </footer>
+
+    <!-- start: JavaScript-->
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery-1.9.1.min.js"></script>
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery-migrate-1.0.0.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery-ui-1.10.0.custom.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.ui.touch-punch.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/modernizr.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/bootstrap.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.cookie.js"></script>
+
+    <script src='<?php echo base_url() ?>assets/admin/js/fullcalendar.min.js'></script>
+
+    <script src='<?php echo base_url() ?>assets/admin/js/jquery.dataTables.min.js'></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/excanvas.js"></script>
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.flot.js"></script>
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.flot.pie.js"></script>
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.flot.stack.js"></script>
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.flot.resize.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.chosen.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.uniform.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.cleditor.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.noty.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.elfinder.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.raty.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.iphone.toggle.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.uploadify-3.1.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.gritter.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.imagesloaded.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.masonry.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.knob.modified.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/jquery.sparkline.min.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/counter.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/retina.js"></script>
+
+    <script src="<?php echo base_url() ?>assets/admin/js/custom.js"></script>
+    <!-- end: JavaScript-->
+
+</body>
+
+</html>
