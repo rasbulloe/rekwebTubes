@@ -35,6 +35,7 @@
 </head>
 
 <body>
+
     <!-- start: Header -->
     <div class="navbar">
         <div class="navbar-inner">
@@ -44,7 +45,7 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </a>
-                <a class="brand" href="<?php echo base_url('dashboard') ?>"><span>Astro Admin Panel</span></a>
+                <a class="brand" href="<?php echo base_url('admin/admin') ?>"><span>Astro Admin Panel</span></a>
 
                 <!-- start: Header Menu -->
                 <div class="nav-no-collapse header-nav">
@@ -80,21 +81,15 @@
             <div id="sidebar-left" class="span2">
                 <div class="nav-collapse sidebar-nav">
                     <ul class="nav nav-tabs nav-stacked main-menu">
-                        <li><a href="<?php echo base_url('admin/Admin') ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
+                        <li><a href="<?php echo base_url('admin/admin') ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                         <li><a href="<?php echo base_url('admin/data_barang') ?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Data Barang</span></a></li>
                         <li><a href="<?php echo base_url('admin/invoice') ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Invoices</span></a></li>
+                        <li><a href="<?php echo base_url('admin/tambah_produk') ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Tambah Produk</span></a></li>
 
                     </ul>
                 </div>
             </div>
             <!-- end: Main Menu -->
-
-            <noscript>
-                <div class="alert alert-block span10">
-                    <h4 class="alert-heading">Warning!</h4>
-                    <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a> enabled to use this site.</p>
-                </div>
-            </noscript>
 
             <!-- <?php echo $maincontent; ?> -->
 

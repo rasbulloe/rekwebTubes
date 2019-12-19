@@ -1,45 +1,47 @@
-<?php 
+<?php
+defined('BASEPATH') or exit('No direct script aceess allowed');
 
-class data_barang extends CI_Controller {
-    public function index ()
+class Data_barang extends CI_Controller
+{
+    public function index()
     {
-        $data['barang'] = $this->model_barang->tampil_data()->result();
-        $this->load->view('templates/admin_header');
+
+        $data['barang'] = $this->Barang_model->tampil_data()->result();
         $this->load->view('admin/data_barang', $data);
-        $this->load->view('templates/footer');
     }
 
     public function tambah_aksi()
     {
+
         $nama_brg   = $this->input->post('nama_brg');
-        $keterangan = $this->input->post('keterangan');
+        $keterangan_short = $this->input->post('keterangan_short');
         $kategori   = $this->input->post('kategori');
         $harga      = $this->input->post('harga');
         $stok       = $this->input->post('stok');
         $gambar     = $_FILES['gambar']['name'];
-        if ($gambar_brg =''){}else {
-            $config ['upload_path'] = './uploads';
-            $config ['allowed_types'] = 'jpg|jpeg|png|gif';
+        if ($gambar = '') {
+        } else {
+            $config['upload_path'] = '.assets/img/home/';
+            $config['allowed_types'] = 'jpg|jpeg|png|gif';
 
             $this->load->library('upload', $config);
             if (!$this->upload->do_upload('gambar')) {
-                echo "Gambar Gagal diupload!" ;
-            }else {
-                $gambar_brg=$this->upload->data('file_name');
+                echo "Gambar Gagal diupload!";
+            } else {
+                $gambar = $this->upload->data('file_name');
             }
         }
 
-        $data = array (
+        $data = array(
             'nama_brg'      => $nama_brg,
-            'keterangan'    => $keterangan,
+            'keterangan_short'    => $keterangan_short,
             'kategori'      => $kategori,
             'harga'         => $harga,
             'stok'          => $stok,
             'gambar'        => $gambar
         );
 
-        $this->model_barang->tambah_barang($data, 'tb_barang');
-        redirected('admin/data_barang/index');
+        $this->Barang_model->tambah_barang($data, 'tb_barang');
+        redirect('admin/data_barang/index');
     }
-
 }

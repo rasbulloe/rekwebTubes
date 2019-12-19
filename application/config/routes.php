@@ -55,3 +55,4 @@ $route['translate_uri_dashes'] = FALSE;
 
 $route['contact'] = 'home/contact';
 $route['contact1'] = 'contact/index';
+$route['tambah_produk'] = 'admin/data_barang/tambah_aksi';
