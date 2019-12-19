@@ -161,11 +161,9 @@
                   <td>
                     <div class="btn btn-danger btn-sm"><i class="halflings-icon white thumbs-up"></div>
                   </td>
-                  <td>
-                    <div class="btn btn-success btn-sm"><i class="halflings-icon white edit"></i> </div>
+                  <td><?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-success btn-sm"><i class="halflings-icon white edit"></i> </div>'); ?>
                   </td>
-                  <td>
-                    <div class="btn btn-warning btn-sm"><i class="halflings-icon white trash"></i></div>
+                  <td><?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-warning btn-sm"><i class="halflings-icon white trash"></i></div>'); ?>
                   </td>
                 </tr>
 
