@@ -34,4 +34,63 @@ class Barang_model extends CI_model
         $this->db->update('tb_barang', $data);
     }
 
+    public function getBarangById($id){
+        return $this->db->get_where('tb_barang', ['id_brg'=> $id])->row_array();
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    // public function tambahDataMahasiswa()
+    // {
+    //     $data = [
+    //         "Nama Barang" => $this->input->post('Nama Barang', true),
+    //         "Harga Barang" => $this->input->post('Harga Barang', true),
+    //         "Tanggal Pembelian" => $this->input->post('Tanggal Pembelian', true),
+    //         "Tanggal Penjualan" => $this->input->post('Tanggal Penjualan', true),
+    //         "Spesifikasi" => $this->input->post('Spesifikasi', true),
+    //     ];
+    //     $this->db->insert('barang', $data);
+    // }
+
+    // public function cariDataMahasiswa()
+    // {
+    //     $keyword = $this->input->post('keyword', true);
+    //     $this->db->like('Nama Barang', $keyword);
+    //     $this->db->or_like('Harga Barang', $keyword);
+    //     $this->db->or_like('Tanggal Pembelian', $keyword);
+    //     $this->db->or_like('Tanggal Penjualan', $keyword);
+    //     $this->db->or_like('Spesifikasi', $keyword);
+    //     return $this->db->get('mahasiswa')->result_array();
+    // }
 }
