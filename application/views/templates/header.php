@@ -41,10 +41,10 @@
               Categori
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Kursi</a>
-              <a class="dropdown-item" href="#">Meja Makan</a>
-              <a class="dropdown-item" href="#">Rak Buku</a>
-              <a class="dropdown-item" href="#">Kotak Penimpanan</a>
+              <a class="dropdown-item" href="#"> <i class="fas fa-couch"></i> Kursi</a>
+              <a class="dropdown-item" href="#"><i class="fas fa-utensils"></i> Meja Makan</a>
+              <a class="dropdown-item" href="#"> <i class="fas fa-archive"></i> Lemari Penyimpanan</a>
+              <a class="dropdown-item" href="#"> <i class="fas fa-bed"></i> Tempat Tidur</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/contact'); ?>">Contact</a>
