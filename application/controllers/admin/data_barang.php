@@ -5,8 +5,13 @@ class Data_barang extends CI_Controller
 {
     public function index()
     {
+<<<<<<< HEAD
 
         $data['barang'] = $this->Barang_model->tampil_data()->result();
+=======
+        $data['barang'] = $this->Barang_model->tampilDataBarang()->result();
+        $this->load->view('templates/admin_header');
+>>>>>>> d06e7f6eaf1fd9d47b60b1a87c56b2698d8d131d
         $this->load->view('admin/data_barang', $data);
     }
 
@@ -41,7 +46,12 @@ class Data_barang extends CI_Controller
             'gambar'        => $gambar
         );
 
+<<<<<<< HEAD
         $this->Barang_model->tambah_barang($data, 'tb_barang');
         redirect('admin/data_barang/index');
+=======
+        $this->Barang_model->tambahDataModel($data, 'tb_barang');
+        redirected('admin/data_barang/index');
+>>>>>>> d06e7f6eaf1fd9d47b60b1a87c56b2698d8d131d
     }
 }

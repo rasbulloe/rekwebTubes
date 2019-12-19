@@ -6,7 +6,7 @@ class Home extends CI_Controller
     public function index()
     {
 
-        $data['barang'] = $this->Barang_model->tampil_data()->result();
+        $data['barang'] = $this->Barang_model->tampilDataBarang()->result();
         $data['judul'] = 'Home | Astro';
         $this->load->view('templates/header', $data);
         $this->load->view('home/index', $data);
@@ -21,11 +21,12 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function detail()
+    public function detail($id)
     {
         $data['judul'] = 'Detail | Astro';
+        $data['barang'] = $this->Barang_model->getBarangById($id);
         $this->load->view('templates/header', $data);
-        $this->load->view('detail/index');
+        $this->load->view('home/detail', $data);
         $this->load->view('templates/footer');
     }
 }
