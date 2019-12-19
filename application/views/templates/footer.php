@@ -1,4 +1,5 @@
- <footer id="footer">
+<br><br><br>
+<footer id="footer">
  	<!--Footer-->
  	<div class="footer-top">
  		<div class="container">

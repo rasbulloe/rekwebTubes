@@ -34,15 +34,7 @@
             </div>
         </div>
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+
 
         <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
             <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
