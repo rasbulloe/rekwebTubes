@@ -3,7 +3,7 @@
 class data_barang extends CI_Controller {
     public function index ()
     {
-        $data['barang'] = $this->model_barang->tampilDataBarang()->result();
+        $data['barang'] = $this->Barang_model->tampilDataBarang()->result();
         $this->load->view('templates/admin_header');
         $this->load->view('admin/data_barang', $data);
         $this->load->view('templates/footer');
@@ -38,7 +38,7 @@ class data_barang extends CI_Controller {
             'gambar'        => $gambar
         );
 
-        $this->model_barang->tambah_barang($data, 'tb_barang');
+        $this->Barang_model->tambahDataModel($data, 'tb_barang');
         redirected('admin/data_barang/index');
     }
 
