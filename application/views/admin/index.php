@@ -84,8 +84,6 @@
                         <li><a href="<?php echo base_url('admin/admin') ?>"><i class="icon-bar-chart"></i><span class="hidden-tablet"> Dashboard</span></a></li>
                         <li><a href="<?php echo base_url('admin/data_barang') ?>"><i class="icon-tasks"></i><span class="hidden-tablet"> Data Barang</span></a></li>
                         <li><a href="<?php echo base_url('admin/invoice') ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Invoices</span></a></li>
-                        <li><a href="<?php echo base_url('admin/tambah_produk') ?>"><i class="icon-envelope"></i><span class="hidden-tablet"> Tambah Produk</span></a></li>
-
                     </ul>
                 </div>
             </div>

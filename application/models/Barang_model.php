@@ -2,21 +2,15 @@
 class Barang_model extends CI_model
 {
 
-    public function tampilDataBarang()
+    public function tampil_data()
     {
         return $this->db->get('tb_barang');
     }
 
-<<<<<<< HEAD
     public function tambah_barang($data, $table)
     {
         $this->db->insert($table, $data);
     }
-=======
-        public function tambahDataModel($data, $table){
-            $this->db->insert($table,$data);
-        }
->>>>>>> d06e7f6eaf1fd9d47b60b1a87c56b2698d8d131d
 
 
     public function hapusDataBarang($id)
@@ -41,8 +35,9 @@ class Barang_model extends CI_model
         $this->db->update('tb_barang', $data);
     }
 
-    public function getBarangById($id){
-        return $this->db->get_where('tb_barang', ['id_brg'=> $id])->row_array();
+    public function getBarangById($id)
+    {
+        return $this->db->get_where('tb_barang', ['id_brg' => $id])->row_array();
     }
 
 
