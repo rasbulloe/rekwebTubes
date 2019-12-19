@@ -20,93 +20,26 @@
     </a>
 </div>
 
-<div class="container">
-    <h2 class="text-center font-weight-bold">LIST PRODUK YANG DITAMPILKAN</h2>
+<br>
+<h1 class="text-center font-weight-bold">Pilihan SALEabration untukmu</h1>
 
-    <div class="row mx-auto">
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+<div class="container-fluid">
+    <div class="row">
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+        <?php foreach ($barang as $brg) : ?>
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
+            <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
+                <img src="<?= base_url() . '/assets/img/home/' . $brg->gambar; ?>" class=" card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $brg->nama_brg; ?></h5>
+                    <small><?= $brg->keterangan_short; ?></small><br>
+                    <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
+                    <a href="#" class="btn btn-primary">Detail</a>
+                    <a href="#" class="btn btn-success">Tambah ke Keranjang</a>
+                </div>
             </div>
-        </div>
 
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
+        <?php endforeach; ?>
+
     </div>
-
-    <div class="row mx-auto">
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
-
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
-
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
-
-        <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
-            <img src="<?= base_url(); ?>/assets/img/home/produk1.jpg" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title">Kursi Bersayap</h5>
-                <p class="card-text">Jika menggunakan kursi ini anda akan terbang mengelilingi dunia. </p>
-                <h4 class="font-weight-bold">Rp 2.300.000</h4>
-                <a href="#" class="btn btn-primary">Detail</a>
-            </div>
-        </div>
-    </div>
-
-
-
 </div>

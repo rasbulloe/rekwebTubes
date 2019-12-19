@@ -38,11 +38,13 @@
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Shop
+              Categori
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Detail Product</a>
-              <a class="dropdown-item" href="#">Shop Category</a>
+              <a class="dropdown-item" href="#">Kursi</a>
+              <a class="dropdown-item" href="#">Meja Makan</a>
+              <a class="dropdown-item" href="#">Rak Buku</a>
+              <a class="dropdown-item" href="#">Kotak Penimpanan</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/contact'); ?>">Contact</a>
