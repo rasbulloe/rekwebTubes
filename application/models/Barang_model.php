@@ -32,6 +32,10 @@ class Barang_model extends CI_model
         $this->db->update('barang', $data);
     }
 
+    public function getBarangById($id){
+        return $this->db->get_where('tb_barang', ['id_brg'=> $id])->row_array();
+    }
+
 
 
 

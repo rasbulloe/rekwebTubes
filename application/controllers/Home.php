@@ -21,11 +21,12 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function detail()
+    public function detail($id)
     {
         $data['judul'] = 'Detail | Astro';
+        $data['barang'] = $this->Barang_model->getBarangById($id);
         $this->load->view('templates/header', $data);
-        $this->load->view('detail/index');
+        $this->load->view('home/detail', $data);
         $this->load->view('templates/footer');
     }
 }
