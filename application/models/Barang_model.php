@@ -7,6 +7,10 @@ class Barang_model extends CI_model
         return $this->db->get('tb_barang');
     }
 
+        public function tambah_barang($data, $table){
+            $this->db->insert($table,$data);
+        }
+
 
     public function hapusDataBarang($id)
     {
@@ -27,6 +31,7 @@ class Barang_model extends CI_model
 
         $this->db->update('barang', $data);
     }
+
 
 
 
