@@ -3,7 +3,7 @@
 class data_barang extends CI_Controller {
     public function index ()
     {
-        $data['barang'] = $this->model_barang->tampil_data()->result();
+        $data['barang'] = $this->model_barang->tampilDataBarang()->result();
         $this->load->view('templates/admin_header');
         $this->load->view('admin/data_barang', $data);
         $this->load->view('templates/footer');
