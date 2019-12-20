@@ -17,6 +17,25 @@
 
 
 
+
+  <link href="<?= base_url(); ?>/assets/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+  <!-- Product view slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/jquery.simpleLens.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick.css">
+  <!-- price picker slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
+  <!-- Theme color -->
+  <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet">
+  <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
+  <!-- Top Slider CSS -->
+  <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+
+  <!-- Main style sheet -->
+  <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
+
+
+
   <title> <?= $judul ?> </title>
 </head>
 
@@ -67,7 +86,7 @@
               $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
               ?>
 
-              <?php echo  anchor('home/detail_keranjang',$keranjang)  ?>
+              <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
             </li>
           </ul>
         </div>
