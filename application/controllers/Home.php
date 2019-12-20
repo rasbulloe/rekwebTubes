@@ -30,7 +30,7 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function tambah_ke_keranjang()
+    public function tambah_ke_keranjang($id)
     {
         $barang = $this->Barang_model->find($id);
 
