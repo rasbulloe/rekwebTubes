@@ -29,4 +29,22 @@ class Home extends CI_Controller
         $this->load->view('home/detail', $data);
         $this->load->view('templates/footer');
     }
+
+    public function tambah_ke_keranjang()
+    {
+        $barang = $this->Barang_model->find($id);
+
+        $data = array(
+            'id'            => $barang->id_brg,
+            'nama_brg'      => $barang->nama_brg,
+            'keterangan_short'  => $barang->keterangan_short,
+            'kategori'      => $barang->kategori,
+            'harga'         => $barang->harga,
+            'stok'          => $barang->stok,
+            'gambar'        => $barang->gambar
+        );
+
+        $this->cart->insert($data);
+        redirect('index');
+    }
 }
