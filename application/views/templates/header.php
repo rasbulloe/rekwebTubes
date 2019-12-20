@@ -17,6 +17,25 @@
 
 
 
+
+  <link href="<?= base_url(); ?>/assets/css/jquery.smartmenus.bootstrap.css" rel="stylesheet">
+  <!-- Product view slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/jquery.simpleLens.css">
+  <!-- slick slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick.css">
+  <!-- price picker slider -->
+  <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
+  <!-- Theme color -->
+  <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet">
+  <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
+  <!-- Top Slider CSS -->
+  <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
+
+  <!-- Main style sheet -->
+  <link href="<?= base_url(); ?>/assets/css/style.css" rel="stylesheet">
+
+
+
   <title> <?= $judul ?> </title>
 </head>
 
@@ -24,7 +43,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
     <div class="container" ml-5>
-      <a class="navbar-brand font-weight-bold" href="#"><img src="<?= base_url(); ?>/assets/img/logo.png" height="90px" weight="90px" alt="">
+      <a class="navbar-brand font-weight-bold" href="<?= base_url(); ?>"><img src="<?= base_url(); ?>/assets/img/logo.png" height="90px" weight="90px" alt="">
       </a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -67,7 +86,7 @@
               $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
               ?>
 
-              <?php echo  anchor('home/detail_keranjang',$keranjang)  ?>
+              <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
             </li>
           </ul>
         </div>
