@@ -72,9 +72,15 @@ class Home extends CI_Controller
 
     public function proses_pesanan()
     {
-        $this->cart->destroy();
-        $this->load->view('templates/header');
-        $this->load->view('proses_pesanan');
-        $this->load->view('templates/footer');
+        $is_processed = $this->Model_invoice->index();
+        if($is_processed){
+
+            $this->cart->destroy();
+            $this->load->view('templates/header');
+            $this->load->view('proses_pesanan');
+            $this->load->view('templates/footer');
+        }else {
+            echo "Maaf, Pesanan Anda Gagal diproses!";
+        }
     }
 }

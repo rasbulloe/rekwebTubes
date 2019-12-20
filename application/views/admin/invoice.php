@@ -108,12 +108,10 @@
           <li><a href="<?php echo base_url('manage/product') ?>">Manage Product</a></li>
         </ul>
 
-        <button class="btn btn-sm btn-primary mb-3" data-toggle="modal" data-target="#tambah_barang"><i class="fas fa-plus fa-sm"></i>Tambah Barang</button>
-
         <div class="row-fluid sortable">
           <div class="box span12">
             <div class="box-header" data-original-title>
-              <h2><i class="halflings-icon user"></i><span class="break"></span>Manage Product</h2>
+              <h2><i class="halflings-icon user"></i><span class="break"></span>Manage Invoice</h2>
               <div class="box-icon">
                 <a href="#" class="btn-setting"><i class="halflings-icon wrench"></i></a>
                 <a href="#" class="btn-minimize"><i class="halflings-icon chevron-up"></i></a>
@@ -121,53 +119,29 @@
               </div>
             </div>
 
-            <style type="text/css">
-              #result {
-                color: red;
-                padding: 5px
-              }
-
-              #result p {
-                color: red
-              }
-            </style>
-            <div id="result">
-              <p><?php echo $this->session->flashdata('message'); ?></p>
-            </div>
-
 
             <table class="table table-bordered">
-              <tr>
-                <th>NO</th>
-                <th>NAMA BARANG</th>
-                <th>KETERANGAN</th>
-                <th>KATEGORI</th>
-                <th>HARGA</th>
-                <th>STOCK</th>
-                <th colspan="3">AKSI</th>
-              </tr>
+            <tr>
+            <th>Id Invoice</th>
+            <th>Nama Pemesanan</th>
+            <th>Alamat Pengiriman</th>
+            <th>Tanggal Pemesanan</th>
+            <th>Aksi</th>
+        </tr>
 
-              <?php
-              $no = 1;
-              foreach ($barang as $brg) : ?>
+        <?php 
+        $no = 1;
+        foreach ($invoice as $inv): ?>
+        <tr>
+            <td><?php echo $no++ ?></td>
+            <td><?php echo $inv->nama ?></td>
+            <td><?php echo $inv->alamat ?></td>
+            <td><?php echo $inv->tgl_pesan ?></td>
+            <td><?php echo $inv->batas_bayar ?></td>
+            <td><div class="btn btn-sm btn-primary">Detail</div></td>
+        </tr>
 
-                <tr>
-                  <td><?= $no++; ?> </td>
-                  <td><?= $brg->nama_brg; ?> </td>
-                  <td><?= $brg->keterangan_short; ?> </td>
-                  <td><?= $brg->kategori; ?> </td>
-                  <td><?= $brg->harga ?> </td>
-                  <td><?= $brg->stok ?> </td>
-                  <td>
-                    <div class="btn btn-warning btn-sm"><i class="halflings-icon white thumbs-up"></div>
-                  </td>
-                  <td><?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-success btn-sm"><i class="halflings-icon white edit"></i> </div>'); ?>
-                  </td>
-                  <td><?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-danger btn-sm"><i class="halflings-icon white trash"></i></div>'); ?>
-                  </td>
-                </tr>
-
-              <?php endforeach; ?>
+        <?php endforeach; ?>
 
             </table>
 
@@ -330,3 +304,4 @@
 </body>
 
 </html>
+
