@@ -59,6 +59,19 @@
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
+
+        <div class="navbar">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <?php
+              $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
+              ?>
+
+              <?php echo $keranjang ?>
+            </li>
+          </ul>
+        </div>
+
         <div class="icon mt-2">
           <h5>
             <a href="#">
@@ -69,6 +82,7 @@
             </a>
           </h5>
         </div>
+
       </div>
     </div>
     <a href="<?= base_url('auth'); ?>">
