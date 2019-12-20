@@ -24,6 +24,7 @@
 <h1 class="text-center font-weight-bold">Pilihan SALEabration untukmu</h1>
 
 
+<<<<<<< HEAD
 <div class="container">
     <div class="container-fluid">
         <div class="row">
@@ -39,6 +40,18 @@
                         <a href="<?= base_url(); ?>home/detail/<?= $brg->id_brg; ?>" class="btn btn-primary">Detail</a>
                         <?php echo anchor('index/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
                     </div>
+=======
+        <?php foreach ($barang as $brg) : ?>
+
+            <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
+                <img src="<?= base_url() . '/assets/img/home/' . $brg->gambar; ?>" class=" card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title"><?= $brg->nama_brg; ?></h5>
+                    <small><?= $brg->keterangan_short; ?></small><br>
+                    <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
+                    <?= anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>'); ?>
+                    <a href="<?= base_url(); ?>home/detail/<?= $brg->id_brg; ?>" class="btn btn-primary">Detail</a>
+>>>>>>> 03af259b85541e156c1314e549d248bb051d59c2
                 </div>
     
             <?php endforeach; ?>

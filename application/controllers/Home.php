@@ -35,16 +35,18 @@ class Home extends CI_Controller
         $barang = $this->Barang_model->find($id);
 
         $data = array(
-            'id'            => $barang->id_brg,
-            'nama_brg'      => $barang->nama_brg,
+            'id'                => $barang->id_brg,
+            'qty'               => 1,
+            'price'             => $barang->harga,
+            'name'              => $barang->nama_brg,
             'keterangan_short'  => $barang->keterangan_short,
-            'kategori'      => $barang->kategori,
-            'harga'         => $barang->harga,
-            'stok'          => $barang->stok,
-            'gambar'        => $barang->gambar
+            'kategori'          => $barang->kategori,
+            'harga'             => $barang->harga,
+            'stok'              => $barang->stok,
+            'gambar'            => $barang->gambar
         );
 
         $this->cart->insert($data);
-        redirect('index');
+        redirect('home');
     }
 }
