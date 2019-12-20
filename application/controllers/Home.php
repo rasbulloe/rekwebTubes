@@ -49,4 +49,11 @@ class Home extends CI_Controller
         $this->cart->insert($data);
         redirect('home');
     }
+
+    public function detail_keranjang ()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('keranjang');
+        $this->load->view('templates/footer');
+    }
 }
