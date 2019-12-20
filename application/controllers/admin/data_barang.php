@@ -21,7 +21,7 @@ class Data_barang extends CI_Controller
         $gambar     = $_FILES['gambar']['name'];
         if ($gambar = '') {
         } else {
-            $config['upload_path'] = '.assets/img/home/';
+            $config['upload_path'] = './assets/img/home/';
             $config['allowed_types'] = 'jpg|jpeg|png|gif';
 
             $this->load->library('upload', $config);
