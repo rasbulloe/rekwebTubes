@@ -30,7 +30,7 @@
     </table>
 
     <div align="right">
-            <a href="<?php echo base_url('home/hapus_keranjang') ?>"><div class="btn btn-sm btn-danger">Hapus Keranjang</div></a>
+            <a href="<?php echo base_url('home/hapus_keranjang') ?>" class="tombol-hapus"><div class="btn btn-sm btn-danger">Hapus Keranjang</div></a>
 
             <a href="<?php echo base_url('home/index') ?>"><div class="btn btn-sm btn-primary">Lanjutkan Belanja</div></a>
 

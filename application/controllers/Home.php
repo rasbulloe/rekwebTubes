@@ -53,7 +53,8 @@ class Home extends CI_Controller
 
     public function detail_keranjang ()
     {
-        $this->load->view('templates/header');
+        $data['judul'] = 'Keranjang | Astro';
+        $this->load->view('templates/header', $data);
         $this->load->view('keranjang');
         $this->load->view('templates/footer');
     }
@@ -61,6 +62,7 @@ class Home extends CI_Controller
     public function hapus_keranjang()
     {
         $this->cart->destroy();
+        $this->session->set_flashdata('flash', 'Dihapus');
         redirect('home/index');
     }
 

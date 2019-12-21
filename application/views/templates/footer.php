@@ -143,10 +143,14 @@
 <script type="text/javascript" src="<?= base_url(); ?>/assets/js/nouislider.js"></script>
 <!-- Custom js -->
 <script src="<?= base_url(); ?>/assets/js/custom.js"></script>
-<!-- SweetAlert --> 
+<!-- SweetAlert -->
 <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
 
 <script src="<?= base_url(); ?>/assets/js/script.js"></script>
+
+<!-- jQuery -->
+<script src="<?= base_url(); ?>/assets/js/jquery-3.2.1.min.js"></script>
+<script src="<?= base_url(); ?>/assets/js/jquery.easing.1.3.js"></script>
 
 
 </body>
