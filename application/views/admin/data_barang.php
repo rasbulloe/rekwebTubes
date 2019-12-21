@@ -40,6 +40,9 @@
 
 <body>
 
+  <div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash') ?>">
+  </div>
+
   <!-- start: Header -->
   <div class="navbar">
     <div class="navbar-inner">
@@ -322,6 +325,11 @@
   <script src="<?php echo base_url() ?>assets/admin/js/custom.js"></script>
 
   <!-- Bootstrap core JavaScript-->
+
+  <script src="<?= base_url(); ?>/assets/js/sweetalert2.all.min.js"></script>
+
+  <script src="<?= base_url(); ?>/assets/js/script.js"></script>
+
 
 
 

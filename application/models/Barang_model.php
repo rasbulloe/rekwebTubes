@@ -10,6 +10,7 @@ class Barang_model extends CI_model
     public function tambah_barang($data, $table)
     {
         $this->db->insert($table, $data);
+        $this->session->set_flashdata('flash', 'Ditambahkan');
     }
 
     public function edit_barang($where, $table)
