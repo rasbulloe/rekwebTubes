@@ -1,3 +1,6 @@
+<div class="flash-data" data-flashdata="<?= $this->session->flashdata('flash') ?>">
+</div>
+
 <div class="container-fluid"><br><br><br><br><br><br><br>
     <div class="row">
         <div class="col-md-2"></div>
