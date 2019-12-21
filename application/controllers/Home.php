@@ -47,6 +47,7 @@ class Home extends CI_Controller
         );
 
         $this->cart->insert($data);
+        $this->session->set_flashdata('flash', 'Ditambahkan');
         redirect('home');
     }
 
