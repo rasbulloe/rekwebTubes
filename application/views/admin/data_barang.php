@@ -166,7 +166,9 @@
                   </td>
                   <td><?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-success btn-sm"><i class="halflings-icon white edit"></i> </div>'); ?>
                   </td>
-                  <td><?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-danger btn-sm"><i class="halflings-icon white trash"></i></div>'); ?>
+                  <td>
+                    <!-- <?= anchor('admin/data_barang/hapus/' . $brg->id_brg, '<div class="btn btn-danger btn-sm tombol-hapus"><i class="halflings-icon white trash"></i></div>'); ?> -->
+                    <div class="btn btn-danger btn-sm"><a href="<?= base_url(); ?>admin/data_barang/hapus/<?= $brg->id_brg; ?>" class="halflings-icon white trash tombol-hapus"></a></div>
                   </td>
                 </tr>
 

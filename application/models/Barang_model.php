@@ -22,12 +22,16 @@ class Barang_model extends CI_model
     {
         $this->db->where($where);
         $this->db->update($table, $data);
+        $this->session->set_flashdata('flash', 'Diubah');
+
     }
 
     public function hapus_data($where, $table)
     {
         $this->db->where($where);
         $this->db->delete($table);
+        $this->session->set_flashdata('flash', 'Dihapus');
+
     }
 
     public function find($id)
