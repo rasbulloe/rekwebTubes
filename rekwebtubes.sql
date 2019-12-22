@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 19 Des 2019 pada 08.00
+-- Waktu pembuatan: 22 Des 2019 pada 04.04
 -- Versi server: 10.4.6-MariaDB
 -- Versi PHP: 7.3.9
 
@@ -80,10 +80,60 @@ CREATE TABLE `tb_barang` (
 --
 
 INSERT INTO `tb_barang` (`id_brg`, `nama_brg`, `keterangan_short`, `keterangan_long`, `kategori`, `harga`, `stok`, `gambar`) VALUES
-(1, 'brusali', 'Meja TV yang keren dan tahan lama', 'Jalur keluar kabel memudahkan untuk mengeluarkan kabel dari belakang sehingga tidak terlihat tetapi mudah diambil saat dibutuhkan.\r\nRak yang dapat diatur; menyesuaikan ruang di antara rak sesuai kebutuhan anda.\r\nKompartemen t', 'meja', 999000, 40, 'brusali.jpg'),
+(1, 'Brusalli', 'Meja TV yang keren dan tahan lama', 'Jalur keluar kabel memudahkan untuk mengeluarkan kabel dari belakang sehingga tidak terlihat tetapi mudah diambil saat dibutuhkan.\r\nRak yang dapat diatur; menyesuaikan ruang di antara rak sesuai kebutuhan anda.\r\nKompartemen t', 'meja', 999000, 40, 'brusali.jpg'),
 (2, 'Manick', 'Kotak dengan penutup Hitam', '', 'kotak penyimpanan', 249000, 32, 'manick.jpg'),
 (3, 'BILLY Putih', 'Lemari buku dg panel/pintu kaca, putih', '', 'rak buku', 2799000, 32, 'billy white.jpg'),
 (4, 'JOKKMOKK', 'Meja dan 4 kursi, warna antik', '', 'meja makan', 2299000, 32, 'jokkmokk.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_invoice`
+--
+
+CREATE TABLE `tb_invoice` (
+  `id` int(11) NOT NULL,
+  `nama` varchar(56) NOT NULL,
+  `alamat` varchar(225) NOT NULL,
+  `tgl_pesan` datetime NOT NULL,
+  `batas_bayar` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_invoice`
+--
+
+INSERT INTO `tb_invoice` (`id`, `nama`, `alamat`, `tgl_pesan`, `batas_bayar`) VALUES
+(9, 'dedeaminudin', 'jalan komodor udara supadio', '2019-12-20 20:46:04', '2019-12-21 20:46:04'),
+(10, 'Indrawansyah ', 'setiabudi', '2019-12-22 06:10:45', '2019-12-23 06:10:45');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `tb_pesanan`
+--
+
+CREATE TABLE `tb_pesanan` (
+  `id` int(11) NOT NULL,
+  `id_invoice` int(11) NOT NULL,
+  `id_brg` int(11) NOT NULL,
+  `nama_brg` varchar(50) NOT NULL,
+  `jumlah` int(3) NOT NULL,
+  `harga` int(10) NOT NULL,
+  `pilihan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data untuk tabel `tb_pesanan`
+--
+
+INSERT INTO `tb_pesanan` (`id`, `id_invoice`, `id_brg`, `nama_brg`, `jumlah`, `harga`, `pilihan`) VALUES
+(26, 7, 2, 'Manick', 1, 249000, ''),
+(27, 7, 3, 'BILLY Putih', 1, 2799000, ''),
+(28, 7, 4, 'JOKKMOKK', 1, 2299000, ''),
+(29, 9, 1, 'Brusalli', 1, 999000, ''),
+(30, 9, 2, 'Manick', 1, 249000, ''),
+(31, 10, 1, 'Brusalli', 1, 999000, '');
 
 -- --------------------------------------------------------
 
@@ -108,7 +158,8 @@ CREATE TABLE `user` (
 
 INSERT INTO `user` (`id`, `name`, `email`, `image`, `password`, `role_id`, `is_active`, `date_created`) VALUES
 (3, 'admin', 'admin@admin.com', 'default.jpg', '$2y$10$7vbgVZ0VAYgKW8uuEAraxOZOcSxd/o44iB485d58WdSBn7Zf.4GMO', 1, 1, 1576258618),
-(4, 'test', 'test@test.com', 'default.png', '$2y$10$ccqtRcxNZqAcp2R94ZiDVOLVo1Hv5hXnk2P9ifJo7mDNL4bWFsqI6', 2, 1, 1576391386);
+(4, 'test', 'test@test.com', 'default.png', '$2y$10$ccqtRcxNZqAcp2R94ZiDVOLVo1Hv5hXnk2P9ifJo7mDNL4bWFsqI6', 2, 1, 1576391386),
+(5, 'ari', 'ari@gmail.com', 'default.png', '$2y$10$YSlgJY5hXnQSFevdb0jF2OQZhcEooQ7WxNsCmJNNiMJpc0qBGbhdW', 2, 1, 1576750734);
 
 -- --------------------------------------------------------
 
@@ -214,6 +265,18 @@ ALTER TABLE `tb_barang`
   ADD PRIMARY KEY (`id_brg`);
 
 --
+-- Indeks untuk tabel `tb_invoice`
+--
+ALTER TABLE `tb_invoice`
+  ADD PRIMARY KEY (`id`);
+
+--
+-- Indeks untuk tabel `tb_pesanan`
+--
+ALTER TABLE `tb_pesanan`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indeks untuk tabel `user`
 --
 ALTER TABLE `user`
@@ -263,13 +326,25 @@ ALTER TABLE `produk`
 -- AUTO_INCREMENT untuk tabel `tb_barang`
 --
 ALTER TABLE `tb_barang`
-  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id_brg` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_invoice`
+--
+ALTER TABLE `tb_invoice`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT untuk tabel `tb_pesanan`
+--
+ALTER TABLE `tb_pesanan`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT untuk tabel `user`
 --
 ALTER TABLE `user`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT untuk tabel `user_access_menu`
