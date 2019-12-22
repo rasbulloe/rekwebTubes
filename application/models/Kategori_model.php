@@ -14,7 +14,7 @@ class Kategori_model extends CI_model
 
     public function data_lemari_penyimpanan()
     {
-       return $this->db->get_where("tb_barang", array('Kategori' => 'lemari_penyimpanan'));
+       return $this->db->get_where("tb_barang", array('Kategori' => 'Lemari Penyimpanan'));
     }
 
     public function data_tempat_tidur()
