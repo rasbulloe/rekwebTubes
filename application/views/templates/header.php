@@ -59,10 +59,10 @@
               Categori
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="<?= base_url('kategori/meja_makan') ?>"> <i class="fas fa-couch"></i> Kursi</a>
+              <a class="dropdown-item" href="<?= base_url('kategori/kursi') ?>"> <i class="fas fa-couch"></i> Kursi</a>
               <a class="dropdown-item" href="<?= base_url('kategori/meja_makan') ?>"><i class="fas fa-utensils"></i> Meja Makan</a>
-              <a class="dropdown-item" href="<?= base_url('kategori/meja_makan') ?>"> <i class="fas fa-archive"></i> Lemari Penyimpanan</a>
-              <a class="dropdown-item" href="<?= base_url('kategori/meja_makan') ?>"> <i class="fas fa-bed"></i> Tempat Tidur</a>
+              <a class="dropdown-item" href="<?= base_url('kategori/lemari_penyimpanan') ?>"> <i class="fas fa-archive"></i> Lemari Penyimpanan</a>
+              <a class="dropdown-item" href="<?= base_url('kategori/tempat_tidur') ?>"> <i class="fas fa-bed"></i> Tempat Tidur</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/contact'); ?>">Contact</a>
