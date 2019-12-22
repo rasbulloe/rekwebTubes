@@ -10,6 +10,27 @@ class Kategori extends CI_Controller{
         $this->load->view('kategori/meja_makan', $data);
         $this->load->view('templates/footer');
 	}
+
+	public function kursi(){
+		$data['kursi'] = $this->Kategori_model->data_kursi()->result();
+		$this->load->view('templates/header', $data);
+        $this->load->view('kategori/kursi', $data);
+        $this->load->view('templates/footer');
+	}
+
+	public function lemari_penyimpanan(){
+		$data['lemari_penyimpanan'] = $this->Kategori_model->data_lemari_penyimpanan()->result();
+		$this->load->view('templates/header', $data);
+        $this->load->view('kategori/lemari_penyimpanan', $data);
+        $this->load->view('templates/footer');
+	}
+
+	public function tempat_tidur(){
+		$data['tempat_tidur'] = $this->Kategori_model->data_tempat_tidur()->result();
+		$this->load->view('templates/header', $data);
+        $this->load->view('kategori/tempat_tidur', $data);
+        $this->load->view('templates/footer');
+	}
 }
 
 

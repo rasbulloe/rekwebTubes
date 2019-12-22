@@ -7,4 +7,9 @@ class Kategori_model extends CI_model
        return $this->db->get_where("tb_barang", array('Kategori' => 'Meja Makan'));
     }
 
+    public function data_kursi()
+    {
+       return $this->db->get_where("tb_barang", array('Kategori' => 'Kursi'));
+    }
+
 }

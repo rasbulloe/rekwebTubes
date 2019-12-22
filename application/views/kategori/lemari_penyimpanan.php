@@ -61,14 +61,15 @@
 <br><br><br><br><br><br>
 <br><br>
 <section class="belanja" id="belanja">
-<h1 class="text-center font-weight-bold">Hasil Kategori : </h1>
+    <h1 class="text-center font-weight-bold">Hasil Kategori : </h1>
+
 
 
     <div class="container">
         <div class="container-fluid">
             <div class="row">
 
-                <?php foreach ($meja_makan as $brg) : ?>
+                <?php foreach ($lemari_penyimpanan as $brg) : ?>
 
                     <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
                         <img src="<?= base_url() . '/assets/img/home/' . $brg->gambar; ?>" class=" card-img-top" alt="...">

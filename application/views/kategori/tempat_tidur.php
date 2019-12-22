@@ -68,7 +68,7 @@
         <div class="container-fluid">
             <div class="row">
 
-                <?php foreach ($meja_makan as $brg) : ?>
+                <?php foreach ($tempat_tidur as $brg) : ?>
 
                     <div class="card mt-4 ml-3 mr-3" style="width: 15rem;">
                         <img src="<?= base_url() . '/assets/img/home/' . $brg->gambar; ?>" class=" card-img-top" alt="...">
