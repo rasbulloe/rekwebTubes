@@ -21,14 +21,14 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    public function detail($id)
-    {
-        $data['judul'] = 'Detail | Astro';
-        $data['barang'] = $this->Barang_model->getBarangById($id);
-        $this->load->view('templates/header', $data);
-        $this->load->view('home/detail', $data);
-        $this->load->view('templates/footer');
-    }
+    // public function detail($id)
+    // {
+    //     $data['judul'] = 'Detail | Astro';
+    //     $data['barang'] = $this->Barang_model->getBarangById($id);
+    //     $this->load->view('templates/header', $data);
+    //     $this->load->view('home/detail', $data);
+    //     $this->load->view('templates/footer');
+    // }
 
     public function tambah_ke_keranjang($id)
     {
@@ -85,5 +85,13 @@ class Home extends CI_Controller
         }else {
             echo "Maaf, Pesanan Anda Gagal diproses!";
         }
+    }
+
+    public function detail($id_brg)
+    {
+        $data['barang'] = $this->Barang_model->detail_brg($id_brg);
+        $this->load->view('templates/header');
+        $this->load->view('detail_barang',$data);
+        $this->load->view('templates/footer');
     }
 }

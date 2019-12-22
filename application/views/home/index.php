@@ -98,8 +98,9 @@
                             <h5 class="card-title"><?= $brg->nama_brg; ?></h5>
                             <small><?= $brg->keterangan_short; ?></small><br>
                             <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
-                            <a href="<?= base_url(); ?>home/detail/<?= $brg->id_brg; ?>" class="btn btn-primary">Detail</a>
+                           
                             <?php echo anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
+                            <?php echo anchor('home/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
                         </div>
                     </div>
 
