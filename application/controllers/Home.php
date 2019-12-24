@@ -68,7 +68,8 @@ class Home extends CI_Controller
 
     public function pembayaran()
     {
-        $this->load->view('templates/header');
+        $data['judul'] = 'Pembayaran | Astro';
+        $this->load->view('templates/header', $data);
         $this->load->view('pembayaran');
         $this->load->view('templates/footer');
     }
@@ -78,8 +79,9 @@ class Home extends CI_Controller
         $is_processed = $this->Model_invoice->index();
         if($is_processed){
 
+            $data['judul'] = 'Proses Pesanan | Astro';
             $this->cart->destroy();
-            $this->load->view('templates/header');
+            $this->load->view('templates/header', $data);
             $this->load->view('proses_pesanan');
             $this->load->view('templates/footer');
         }else {
