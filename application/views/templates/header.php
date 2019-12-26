@@ -78,16 +78,6 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-        <div class="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <?php
-              $keranjang = '<i class="fas fa-cart-plus text-dark"></i>' . $this->cart->total_items() . 'items'
-              ?>
-              <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
-            </li>
-          </ul>
-        </div>
 
       </div>
     </div>

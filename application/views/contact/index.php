@@ -17,7 +17,7 @@
           <div class="status alert alert-success" style="display: none"></div>
           <form action="<?= base_url() . 'Contact/tambah_aksi_contact'; ?>" id="main-contact-form" class="contact-form row" name="contact-form" method="post">
             <div class="form-group col-md-6">
-              <input type="text" name="name" class="form-control" required="required" placeholder="Name">
+              <input type="text" name="nama" class="form-control" required="required" placeholder="Name">
             </div>
             <div class="form-group col-md-6">
               <input type="email" name="email" class="form-control" required="required" placeholder="Email">
