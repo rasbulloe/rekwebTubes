@@ -56,20 +56,7 @@ class User extends CI_Controller
     }
 
 
-    public function proses_pesanan()
-    {
-        $is_processed = $this->Model_invoice->index();
-        if ($is_processed) {
 
-            $data['judul'] = 'Proses Pesanan | Astro';
-            $this->cart->destroy();
-            $this->load->view('templates/header', $data);
-            $this->load->view('proses_pesanan');
-            $this->load->view('templates/footer');
-        } else {
-            echo "Maaf, Pesanan Anda Gagal diproses!";
-        }
-    }
 
     public function tambah_ke_keranjang($id)
     {
@@ -92,14 +79,37 @@ class User extends CI_Controller
         redirect('user');
     }
 
+
+    public function pembayaran()
+    {
+        $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+        $data['judul'] = 'Pembayaran | Astro';
+        $this->load->view('templates/user_header', $data);
+        $this->load->view('pembayaran');
+        $this->load->view('templates/footer');
+    }
+
+    public function proses_pesanan()
+    {
+        $is_processed = $this->Model_invoice->index();
+        if ($is_processed) {
+            $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
+            $data['judul'] = 'Proses Pesanan | Astro';
+            $this->cart->destroy();
+            $this->load->view('templates/user_header', $data);
+            $this->load->view('proses_pesanan');
+            $this->load->view('templates/footer');
+        } else {
+            echo "Maaf, Pesanan Anda Gagal diproses!";
+        }
+    }
+
     public function detail($id_brg)
     {
-        $data['judul'] = 'Proses Pesanan | Astro';
-        $data['barang'] = $this->Barang_model->detail_brg($id_brg);
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
-
+        $data['barang'] = $this->Barang_model->detail_brg($id_brg);
         $this->load->view('templates/user_header', $data);
-        $this->load->view('user/detail_barang', $data);
+        $this->load->view('detail_barang', $data);
         $this->load->view('templates/footer');
     }
 }

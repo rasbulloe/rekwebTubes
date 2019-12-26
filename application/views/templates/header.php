@@ -27,6 +27,8 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
   <!-- Theme color -->
   <!-- <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet"> -->
+
+
   <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
   <!-- Top Slider CSS -->
   <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">

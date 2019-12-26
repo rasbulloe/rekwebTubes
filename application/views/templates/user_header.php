@@ -27,6 +27,9 @@
     <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
     <!-- Theme color -->
     <!-- <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet"> -->
+
+    <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet">
+
     <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
     <!-- Top Slider CSS -->
     <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
@@ -44,6 +47,7 @@
     <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
         <div class="container" ml-5>
             <a class="navbar-brand font-weight-bold" href="<?= base_url('User'); ?>"><img src="<?= base_url(); ?>/assets/img/logo.png" height="90px" weight="90px" alt="">
+
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -53,6 +57,9 @@
                 <ul class="navbar-nav ml-auto mr-4">
                     <li class="nav-item active">
                         <a class="nav-link" href="<?= base_url('User'); ?>">Home <span class="sr-only">(current)</span></a>
+
+
+
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -63,9 +70,11 @@
                             <a class="dropdown-item" href="<?= base_url('kategori_user/meja_makan') ?>"><i class="fas fa-utensils"></i> Meja Makan</a>
                             <a class="dropdown-item" href="<?= base_url('kategori_user/lemari_penyimpanan') ?>"> <i class="fas fa-archive"></i> Lemari Penyimpanan</a>
                             <a class="dropdown-item" href="<?= base_url('kategori_user/tempat_tidur') ?>"> <i class="fas fa-bed"></i> Tempat Tidur</a>
+
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="<?= base_url('/contact'); ?>">Contact</a>
+
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0">
@@ -111,4 +120,22 @@
                 </a>
             </div>
         </div>
+        <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+                        <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">×</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                        <a class="btn btn-primary" href="<?= base_url(); ?>">Logout</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
     </nav>

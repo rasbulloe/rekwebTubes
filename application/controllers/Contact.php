@@ -11,4 +11,19 @@ class Contact extends CI_Controller
         $this->load->view('contact/index');
         $this->load->view('templates/footer');
     }
+
+    public function tambah_aksi_contact(){
+    	$name   = $this->input->post('nama', true);
+        $email = $this->input->post('email');
+        $pesan   = $this->input->post('pesan');
+
+         $data = array(
+            'name' 	=> $name,
+            'email' => $email,
+            'pesan' => $pesan,
+        );
+
+        $this->Contact_model->tambah_contact($data, 'contact');
+        redirect('contact/index');
+    }
 }
