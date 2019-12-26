@@ -30,21 +30,21 @@ class Home extends CI_Controller
     //     $this->load->view('templates/footer');
     // }
 
-    public function tambah_ke_keranjang($id)
-    {
-        $barang = $this->Barang_model->find($id);
+    // public function tambah_ke_keranjang($id)
+    // {
+    //     $barang = $this->Barang_model->find($id);
 
-        $data = array(
-            'id'                => $barang->id_brg,
-            'qty'               => 1,
-            'price'             => $barang->harga,
-            'name'              => $barang->nama_brg,
-            'keterangan_short'  => $barang->keterangan_short,
-            'kategori'          => $barang->kategori,
-            'harga'             => $barang->harga,
-            'stok'              => $barang->stok,
-            'gambar'            => $barang->gambar
-        );
+    //     $data = array(
+    //         'id'                => $barang->id_brg,
+    //         'qty'               => 1,
+    //         'price'             => $barang->harga,
+    //         'name'              => $barang->nama_brg,
+    //         'keterangan_short'  => $barang->keterangan_short,
+    //         'kategori'          => $barang->kategori,
+    //         'harga'             => $barang->harga,
+    //         'stok'              => $barang->stok,
+    //         'gambar'            => $barang->gambar
+    //     );
 
     //     $this->cart->insert($data);
     //     // $this->session->set_flashdata('flash', 'Ditambahkan');
