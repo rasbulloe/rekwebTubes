@@ -35,9 +35,9 @@
                     </tr>
                 </table>
 
-                <?php echo anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
+                <div class="btn btn-success mt-3"><a href="<?= base_url('auth')?>" class="text-white">Tambah ke Keranjang</a></div>
 
-                <?php echo anchor('home/index/', '<div class="btn btn-danger mt-3">Kembali</div>') ?>
+                <?php echo anchor('user/index/', '<div class="btn btn-danger mt-3">Kembali</div>') ?>
                 </div>
     </div>
             <?php endforeach; ?>

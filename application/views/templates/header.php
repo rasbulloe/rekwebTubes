@@ -25,8 +25,7 @@
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/slick.css">
   <!-- price picker slider -->
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
-  <!-- Theme color -->
-  <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet">
+ 
   <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
   <!-- Top Slider CSS -->
   <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
@@ -79,16 +78,6 @@
           <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
         </form>
 
-        <div class="navbar">
-          <ul class="nav navbar-nav navbar-right">
-            <li>
-              <?php
-              $keranjang = '<i class="fas fa-cart-plus text-dark"></i>' . $this->cart->total_items() . 'items'
-              ?>
-              <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
-            </li>
-          </ul>
-        </div>
 
       </div>
     </div>
