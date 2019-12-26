@@ -83,23 +83,11 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <?php
-              $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
+              $keranjang = '<i class="fas fa-cart-plus text-dark"></i>' . $this->cart->total_items() . 'items'
               ?>
-
               <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
             </li>
           </ul>
-        </div>
-
-        <div class="icon mt-2">
-          <h5>
-            <a href="#">
-              <i class="far fa-heart ml-3 mr-3 text-dark"></i>
-            </a>
-            <a href="#">
-              <i class="fas fa-cart-plus text-dark"></i>
-            </a>
-          </h5>
         </div>
 
       </div>
@@ -108,3 +96,5 @@
       <button type="button" class="btn btn-dark">Login</button>
     </a>
   </nav>
+
+  
