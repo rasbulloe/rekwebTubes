@@ -2,14 +2,14 @@
 class Contact_model extends CI_model{
     
 
-    public function tambahDataContact(){
+    public function tambah_contact(){
         $data = [
-                "namaPembeli" => $this->input->post('nama', true),
+                "nama" => $this->input->post('nama', true),
                 "email" => $this->input->post('email', true),
-                "noTelp" => $this->input->post('noTelp', true),
                 "pesan" => $this->input->post('pesan', true),
         ];
         $this->db->insert('contact', $data);
+        $this->session->set_flashdata('flash', 'Saran dan/kritik anda telah ditambahkan!');
     }
     
 }
