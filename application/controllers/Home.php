@@ -30,26 +30,26 @@ class Home extends CI_Controller
     //     $this->load->view('templates/footer');
     // }
 
-    public function tambah_ke_keranjang($id)
-    {
-        $barang = $this->Barang_model->find($id);
+    // public function tambah_ke_keranjang($id)
+    // {
+    //     $barang = $this->Barang_model->find($id);
 
-        $data = array(
-            'id'                => $barang->id_brg,
-            'qty'               => 1,
-            'price'             => $barang->harga,
-            'name'              => $barang->nama_brg,
-            'keterangan_short'  => $barang->keterangan_short,
-            'kategori'          => $barang->kategori,
-            'harga'             => $barang->harga,
-            'stok'              => $barang->stok,
-            'gambar'            => $barang->gambar
-        );
+    //     $data = array(
+    //         'id'                => $barang->id_brg,
+    //         'qty'               => 1,
+    //         'price'             => $barang->harga,
+    //         'name'              => $barang->nama_brg,
+    //         'keterangan_short'  => $barang->keterangan_short,
+    //         'kategori'          => $barang->kategori,
+    //         'harga'             => $barang->harga,
+    //         'stok'              => $barang->stok,
+    //         'gambar'            => $barang->gambar
+    //     );
 
-        $this->cart->insert($data);
-        $this->session->set_flashdata('flash', 'Ditambahkan');
-        redirect('home');
-    }
+    //     $this->cart->insert($data);
+    //     // $this->session->set_flashdata('flash', 'Ditambahkan');
+    //     redirect('home');
+    // }
 
     public function detail_keranjang ()
     {
@@ -92,8 +92,7 @@ class Home extends CI_Controller
     public function detail($id_brg)
     {
         $data['barang'] = $this->Barang_model->detail_brg($id_brg);
-        $data['judul'] = 'Detail Produk | Astro';
-        $this->load->view('templates/header', $data);
+        $this->load->view('templates/header');
         $this->load->view('detail_barang',$data);
         $this->load->view('templates/footer');
     }
