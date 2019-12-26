@@ -15,7 +15,8 @@
                         <div class="seq-title">
                             <span data-seq>Save Up to 75% Off</span>
                             <h2 data-seq>Sofa Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                            <p data-seq>Selamat Datang Di ASTRO.</p>
+                            <h1>Selamat Berbelanja</h1>
                             <a data-seq href="#belanja" class="aa-shop-now-btn aa-secondary-btn page-scroll">SHOP NOW</a>
                         </div>
                     </li>
@@ -27,7 +28,8 @@
                         <div class="seq-title">
                             <span data-seq>Save Up to 40% Off</span>
                             <h2 data-seq>Table Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                            <p data-seq>Pilihlah Barang Yang Sesuai dengan Kebutuhan Anda.</p>
+                            <h1>Selamat Berbelanja</h1>
                             <a data-seq href="#belanja" class="aa-shop-now-btn aa-secondary-btn page-scroll">SHOP NOW</a>
                         </div>
                     </li>
@@ -39,7 +41,8 @@
                         <div class="seq-title">
                             <span data-seq>Save Up to 75% Off</span>
                             <h2 data-seq>Library Collection</h2>
-                            <p data-seq>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minus, illum.</p>
+                            <p data-seq>Dapatkan Diskon Hingga 75%. Untuk Barang Tertentu </p>
+                            <h1>Selamat Berbelanja</h1>
                             <a data-seq href="#belanja" class="aa-shop-now-btn aa-secondary-btn page-scroll">SHOP NOW</a>
                         </div>
                     </li>
