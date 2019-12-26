@@ -51,49 +51,49 @@ class Home extends CI_Controller
     //     redirect('home');
     // }
 
-    public function detail_keranjang ()
-    {
-        $data['judul'] = 'Keranjang | Astro';
-        $this->load->view('templates/header', $data);
-        $this->load->view('keranjang');
-        $this->load->view('templates/footer');
-    }
+    // public function detail_keranjang ()
+    // {
+    //     $data['judul'] = 'Keranjang | Astro';
+    //     $this->load->view('templates/header', $data);
+    //     $this->load->view('keranjang');
+    //     $this->load->view('templates/footer');
+    // }
 
-    public function hapus_keranjang()
-    {
-        $this->cart->destroy();
-        $this->session->set_flashdata('flash', 'Dihapus');
-        redirect('home/index');
-    }
+    // public function hapus_keranjang()
+    // {
+    //     $this->cart->destroy();
+    //     $this->session->set_flashdata('flash', 'Dihapus');
+    //     redirect('home/index');
+    // }
 
-    public function pembayaran()
-    {
-        $data['judul'] = 'Pembayaran | Astro';
-        $this->load->view('templates/header', $data);
-        $this->load->view('pembayaran');
-        $this->load->view('templates/footer');
-    }
+    // public function pembayaran()
+    // {
+    //     $data['judul'] = 'Pembayaran | Astro';
+    //     $this->load->view('templates/header', $data);
+    //     $this->load->view('pembayaran');
+    //     $this->load->view('templates/footer');
+    // }
 
-    public function proses_pesanan()
-    {
-        $is_processed = $this->Model_invoice->index();
-        if($is_processed){
+    // public function proses_pesanan()
+    // {
+    //     $is_processed = $this->Model_invoice->index();
+    //     if($is_processed){
 
-            $data['judul'] = 'Proses Pesanan | Astro';
-            $this->cart->destroy();
-            $this->load->view('templates/header', $data);
-            $this->load->view('proses_pesanan');
-            $this->load->view('templates/footer');
-        }else {
-            echo "Maaf, Pesanan Anda Gagal diproses!";
-        }
-    }
+    //         $data['judul'] = 'Proses Pesanan | Astro';
+    //         $this->cart->destroy();
+    //         $this->load->view('templates/header', $data);
+    //         $this->load->view('proses_pesanan');
+    //         $this->load->view('templates/footer');
+    //     }else {
+    //         echo "Maaf, Pesanan Anda Gagal diproses!";
+    //     }
+    // }
 
-    public function detail($id_brg)
-    {
-        $data['barang'] = $this->Barang_model->detail_brg($id_brg);
-        $this->load->view('templates/header');
-        $this->load->view('detail_barang',$data);
-        $this->load->view('templates/footer');
-    }
+    // public function detail($id_brg)
+    // {
+    //     $data['barang'] = $this->Barang_model->detail_brg($id_brg);
+    //     $this->load->view('templates/header');
+    //     $this->load->view('detail_barang',$data);
+    //     $this->load->view('templates/footer');
+    // }
 }
