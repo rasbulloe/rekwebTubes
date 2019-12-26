@@ -511,34 +511,34 @@
                 <ul class="dashboard-list metro">
                     <li class="green">
                         <a href="#">
-                            <img class="avatar" alt="Dennis Ji" src="<?php echo base_url() ?>assets/admin/img/avatar.jpg">
+                            <img class="avatar" src="<?php echo base_url() ?>assets/admin/img/profile/default.png">
                         </a>
-                        <strong>Name:</strong> Dennis Ji<br>
-                        <strong>Since:</strong> Jul 25, 2012 11:09<br>
+                        <strong>Name:</strong> Dede Aminudin N<br>
+                        <strong>Since:</strong> Des 25, 2019 11:09<br>
                         <strong>Status:</strong> Approved
                     </li>
                     <li class="yellow">
                         <a href="#">
-                            <img class="avatar" alt="Dennis Ji" src="<?php echo base_url() ?>assets/admin/img/avatar.jpg">
+                            <img class="avatar" src="<?php echo base_url() ?>assets/admin/img/profile/default.png">
                         </a>
-                        <strong>Name:</strong> Dennis Ji<br>
-                        <strong>Since:</strong> Jul 25, 2012 11:09<br>
+                        <strong>Name:</strong> Eki Jaber<br>
+                        <strong>Since:</strong> Des 25, 2019 11:09<br>
                         <strong>Status:</strong> Pending
                     </li>
                     <li class="red">
                         <a href="#">
-                            <img class="avatar" alt="Dennis Ji" src="<?php echo base_url() ?>assets/admin/img/avatar.jpg">
+                            <img class="avatar" src="<?php echo base_url() ?>assets/admin/img/profile/default.png">
                         </a>
-                        <strong>Name:</strong> Dennis Ji<br>
-                        <strong>Since:</strong> Jul 25, 2012 11:09<br>
+                        <strong>Name:</strong> Erdika Ramadhan<br>
+                        <strong>Since:</strong> Des 25, 2019 11:09<br>
                         <strong>Status:</strong> Banned
                     </li>
                     <li class="blue">
                         <a href="#">
-                            <img class="avatar" alt="Dennis Ji" src="<?php echo base_url() ?>assets/admin/img/avatar.jpg">
+                            <img class="avatar" src="<?php echo base_url() ?>assets/admin/img/profile/default.png">
                         </a>
-                        <strong>Name:</strong> Dennis Ji<br>
-                        <strong>Since:</strong> Jul 25, 2012 11:09<br>
+                        <strong>Name:</strong> Rismawati<br>
+                        <strong>Since:</strong> Des 25, 2019 11:09<br>
                         <strong>Status:</strong> Updated
                     </li>
                 </ul>
