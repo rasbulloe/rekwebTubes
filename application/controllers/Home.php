@@ -92,7 +92,8 @@ class Home extends CI_Controller
     public function detail($id_brg)
     {
         $data['barang'] = $this->Barang_model->detail_brg($id_brg);
-        $this->load->view('templates/header');
+        $data['judul'] = 'Detail Produk | Astro';
+        $this->load->view('templates/header', $data);
         $this->load->view('detail_barang',$data);
         $this->load->view('templates/footer');
     }

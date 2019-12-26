@@ -81,7 +81,6 @@
                             <?php echo anchor('home/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
                         </div>
                     </div>
-
                 <?php endforeach; ?>
 
             </div>
