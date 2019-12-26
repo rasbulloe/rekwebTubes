@@ -188,8 +188,8 @@
                             <small><?= $brg->keterangan_short; ?></small><br>
                             <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
                            
-                            <?php echo anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
-                            <?php echo anchor('home/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
+                            <?php echo anchor('user/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
+                            <?php echo anchor('user/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
                         </div>
                     </div>
 

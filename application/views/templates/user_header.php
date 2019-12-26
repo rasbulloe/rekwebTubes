@@ -43,7 +43,7 @@
 
     <nav class="navbar navbar-expand-lg navbar-light bg-warning fixed-top">
         <div class="container" ml-5>
-            <a class="navbar-brand font-weight-bold" href="<?= base_url(); ?>"><img src="<?= base_url(); ?>/assets/img/logo.png" height="90px" weight="90px" alt="">
+            <a class="navbar-brand font-weight-bold" href="<?= base_url(); ?>/user/index"><img src="<?= base_url(); ?>/assets/img/logo.png" height="90px" weight="90px" alt="">
             </a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
@@ -52,7 +52,7 @@
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav ml-auto mr-4">
                     <li class="nav-item active">
-                        <a class="nav-link" href="<?= base_url(); ?>">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="<?= base_url(); ?>/user/index">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -83,24 +83,14 @@
                     <ul class="nav navbar-nav navbar-right">
                         <li>
                             <?php
-                            $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
+                            $keranjang = '<i class="fas fa-cart-plus text-dark"></i>' . $this->cart->total_items() . 'items'
                             ?>
 
-                            <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
+                            <?php echo  anchor('user/detail_keranjang', $keranjang)  ?>
                         </li>
                     </ul>
                 </div>
 
-                <div class="icon mt-2">
-                    <h5>
-                        <a href="#">
-                            <i class="far fa-heart ml-3 mr-3 text-dark"></i>
-                        </a>
-                        <a href="#">
-                            <i class="fas fa-cart-plus text-dark"></i>
-                        </a>
-                    </h5>
-                </div>
 
             </div>
         </div>

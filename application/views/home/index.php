@@ -82,7 +82,6 @@
 <br><br><br><br><br><br>
 <br><br><br><br><br><br>
 <br><br>
-
 <section class="belanja" id="belanja">
     <h1 class="text-center font-weight-bold">Pilihan SALEabration untukmu</h1>
 
@@ -100,7 +99,7 @@
                             <small><?= $brg->keterangan_short; ?></small><br>
                             <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
                            
-                            <?php echo anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
+                            <div class="btn btn-success mt-3"><a href="<?= base_url('auth')?>" class="text-white">Tambah ke Keranjang</a></div>
                             <?php echo anchor('home/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
                         </div>
                     </div>

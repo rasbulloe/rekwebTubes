@@ -8,6 +8,15 @@ if (flashData) {
     });
 }
 
+const tombol = document.querySelector('#tombol');
+tombol.addEventListener('click', function() {
+    Swal({
+        title: 'test',
+        text: 'test',
+        type: 'warning'
+    });
+});
+
 $('.tombol-hapus').on('click', function(e){
     e.preventDefault();
     const href = $(this).attr('href');
