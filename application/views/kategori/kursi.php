@@ -61,7 +61,7 @@
 <br><br><br><br><br><br>
 <br><br>
 <section class="belanja" id="belanja">
-<h1 class="text-center font-weight-bold">Hasil Kategori : </h1>
+    <h1 class="text-center font-weight-bold">Hasil Kategori : </h1>
 
 
     <div class="container">
@@ -76,7 +76,7 @@
                             <h5 class="card-title"><?= $brg->nama_brg; ?></h5>
                             <small><?= $brg->keterangan_short; ?></small><br>
                             <span class="badge badge-pill badge-success">Rp. <?= $brg->harga; ?></span><br>
-                           
+
                             <?php echo anchor('home/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
                             <?php echo anchor('home/detail/' . $brg->id_brg, '<div class="btn btn-success mt-3">Detail</div>') ?>
                         </div>

@@ -26,7 +26,7 @@
   <!-- price picker slider -->
   <link rel="stylesheet" type="text/css" href="<?= base_url(); ?>/assets/css/nouislider.css">
   <!-- Theme color -->
-  <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet">
+  <!-- <link id="switcher" href="<?= base_url(); ?>/assets/css/theme-color/default-theme.css" rel="stylesheet"> -->
   <!-- <link id="switcher" href="css/theme-color/bridge-theme.css" rel="stylesheet"> -->
   <!-- Top Slider CSS -->
   <link href="<?= base_url(); ?>/assets/css/sequence-theme.modern-slide-in.css" rel="stylesheet" media="all">
@@ -67,12 +67,6 @@
           <li class="nav-item">
             <a class="nav-link" href="<?= base_url('/contact'); ?>">Contact</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Help</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
           <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
@@ -83,7 +77,7 @@
           <ul class="nav navbar-nav navbar-right">
             <li>
               <?php
-              $keranjang = 'Keranjang Belanja: ' . $this->cart->total_items() . 'items'
+              $keranjang = '<i class="fas fa-cart-plus text-dark"></i> ' . $this->cart->total_items() . 'items'
               ?>
 
               <?php echo  anchor('home/detail_keranjang', $keranjang)  ?>
@@ -91,16 +85,6 @@
           </ul>
         </div>
 
-        <div class="icon mt-2">
-          <h5>
-            <a href="#">
-              <i class="far fa-heart ml-3 mr-3 text-dark"></i>
-            </a>
-            <a href="#">
-              <i class="fas fa-cart-plus text-dark"></i>
-            </a>
-          </h5>
-        </div>
 
       </div>
     </div>

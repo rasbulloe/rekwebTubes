@@ -51,7 +51,7 @@ class Home extends CI_Controller
         redirect('home');
     }
 
-    public function detail_keranjang ()
+    public function detail_keranjang()
     {
         $data['judul'] = 'Keranjang | Astro';
         $this->load->view('templates/header', $data);
@@ -66,34 +66,27 @@ class Home extends CI_Controller
         redirect('home/index');
     }
 
-    public function pembayaran()
-    {
-        $data['judul'] = 'Pembayaran | Astro';
-        $this->load->view('templates/header', $data);
-        $this->load->view('pembayaran');
-        $this->load->view('templates/footer');
-    }
-
     public function proses_pesanan()
     {
         $is_processed = $this->Model_invoice->index();
-        if($is_processed){
+        if ($is_processed) {
 
             $data['judul'] = 'Proses Pesanan | Astro';
             $this->cart->destroy();
             $this->load->view('templates/header', $data);
             $this->load->view('proses_pesanan');
             $this->load->view('templates/footer');
-        }else {
+        } else {
             echo "Maaf, Pesanan Anda Gagal diproses!";
         }
     }
 
     public function detail($id_brg)
     {
+        $data['judul'] = 'Proses Pesanan | Astro';
         $data['barang'] = $this->Barang_model->detail_brg($id_brg);
-        $this->load->view('templates/header');
-        $this->load->view('detail_barang',$data);
+        $this->load->view('templates/header', $data);
+        $this->load->view('detail_barang', $data);
         $this->load->view('templates/footer');
     }
 }
