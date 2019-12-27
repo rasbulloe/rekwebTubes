@@ -109,7 +109,7 @@ class User extends CI_Controller
         $data['user'] = $this->db->get_where('user', ['email' => $this->session->userdata('email')])->row_array();
         $data['barang'] = $this->Barang_model->detail_brg($id_brg);
         $this->load->view('templates/user_header', $data);
-        $this->load->view('detail_barang', $data);
+        $this->load->view('user/detail_barang', $data);
         $this->load->view('templates/footer');
     }
 }

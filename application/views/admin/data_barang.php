@@ -161,9 +161,7 @@
                   <td><?= $brg->kategori; ?> </td>
                   <td><?= $brg->harga ?> </td>
                   <td><?= $brg->stok ?> </td>
-                  <td>
-                    <div class="btn btn-warning btn-sm"><i class="halflings-icon white thumbs-up"></div>
-                  </td>
+
                   <td><?= anchor('admin/data_barang/edit/' . $brg->id_brg, '<div class="btn btn-success btn-sm"><i class="halflings-icon white edit"></i> </div>'); ?>
                   </td>
                   <td>

@@ -39,7 +39,7 @@
 
                         <?php echo anchor('user/tambah_ke_keranjang/' . $brg->id_brg, '<div class="btn btn-success mt-3">Tambah ke Keranjang</div>') ?>
 
-                        <?php echo anchor('user/index/', '<div class="btn btn-danger mt-3">Kembali</div>') ?>
+                        <?php echo anchor('user', '<div class="btn btn-danger mt-3">Kembali</div>') ?>
                     </div>
                 </div>
             <?php endforeach; ?>

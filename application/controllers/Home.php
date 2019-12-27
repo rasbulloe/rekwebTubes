@@ -21,35 +21,28 @@ class Home extends CI_Controller
         $this->load->view('templates/footer');
     }
 
-    // public function detail($id)
-    // {
-    //     $data['judul'] = 'Detail | Astro';
-    //     $data['barang'] = $this->Barang_model->getBarangById($id);
-    //     $this->load->view('templates/header', $data);
-    //     $this->load->view('home/detail', $data);
-    //     $this->load->view('templates/footer');
-    // }
 
-    // public function tambah_ke_keranjang($id)
-    // {
-    //     $barang = $this->Barang_model->find($id);
 
-    //     $data = array(
-    //         'id'                => $barang->id_brg,
-    //         'qty'               => 1,
-    //         'price'             => $barang->harga,
-    //         'name'              => $barang->nama_brg,
-    //         'keterangan_short'  => $barang->keterangan_short,
-    //         'kategori'          => $barang->kategori,
-    //         'harga'             => $barang->harga,
-    //         'stok'              => $barang->stok,
-    //         'gambar'            => $barang->gambar
-    //     );
+    public function tambah_ke_keranjang($id)
+    {
+        $barang = $this->Barang_model->find($id);
 
-    //     $this->cart->insert($data);
-    //     // $this->session->set_flashdata('flash', 'Ditambahkan');
-    //     redirect('home');
-    // }
+        $data = array(
+            'id'                => $barang->id_brg,
+            'qty'               => 1,
+            'price'             => $barang->harga,
+            'name'              => $barang->nama_brg,
+            'keterangan_short'  => $barang->keterangan_short,
+            'kategori'          => $barang->kategori,
+            'harga'             => $barang->harga,
+            'stok'              => $barang->stok,
+            'gambar'            => $barang->gambar
+        );
+
+        $this->cart->insert($data);
+        // $this->session->set_flashdata('flash', 'Ditambahkan');
+        redirect('home');
+    }
 
     public function detail_keranjang()
     {
